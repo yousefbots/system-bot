@@ -4,7 +4,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
  
- client.user.setGame(`Type $help`,"http://twitch.tv/ArabKings") 
  
  var prefix = "$"
  
