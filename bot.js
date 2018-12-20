@@ -9,49 +9,6 @@ client.on('ready', () => {
  
  
  
- 
- 
- 
- 
- 
- client.on('message', message => {
-  if (true) {
-if (message.content === '$invite') {
-      message.author.send(' تفضل رابط اضاف البوت حبي  |  https://discordapp.com/oauth2/authorize?client_id=500548520307195915&permissions=8&scope=bot | يا ريت ما تنسا تشرفنا في سرفر الصيانة حبي | https://discord.gg/CvDEjq	  ').catch(e => console.log(e.stack));
- 
-    }
-   }
-  });
- 
- 
-client.on('message', message => {
-     if (message.content === ".invite") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
-     
-     
-     
-  message.channel.sendEmbed(true);
-    }
-});
- 
- 
-
- 
- 
- 
-
- 
- 
- 
- 
-
- 
-
-
-
      client.on('guildMemberAdd', member => {
             let channel = member.guild.channels.find('name', 'welcome');
             let memberavatar = member.user.avatarURL
@@ -176,15 +133,14 @@ message.channel.send({embed:embed});
 .setThumbnail(message.author.avatarURL)
 .addField('     **البريفكس [$] ** ')
 .addField('     **(1)-$help** ' ,' **عشان تجيب الهلب والمساعدة** ')
-.addField('     **(2)-$invite**  ' ,' **عشان تضيف البوت** ')
-.addField('     **(3)-$clear** ' , '**عشان تمسح الشات**') 
-.addField('     **(4)-$bc** ' , '**عشان ترسل بروداسكات**') 
-.addField('     **(5)-$ping** ' ,' ** عشان تعرف سرعة البوت ping** ')
-.addField('     **(6)-$server** ' ,' ** عشان تعرف معلومات السرفر** ')
-.addField('     **(7)-$mc** ' ,' ** عشان تقفل الشات** ')
-.addField('     **(8)-$un_mc** ' ,' ** عشان تفتح الشات** ')
-.addField('     **(9)-$bot** ' ,' ** عشان تعرف احوال البوت  ** ')
-.addField('     **(10)-$send** ' ,' ** عشان ترسل رسالة لشخص علي خاص من البوت  ** ')
+.addField('     **(2-$clear** ' , '**عشان تمسح الشات**') 
+.addField('     **(3)-$bc** ' , '**عشان ترسل بروداسكات**') 
+.addField('     **(4)-$ping** ' ,' ** عشان تعرف سرعة البوت ping** ')
+.addField('     **(5)-$server** ' ,' ** عشان تعرف معلومات السرفر** ')
+.addField('     **(6)-$mc** ' ,' ** عشان تقفل الشات** ')
+.addField('     **(7)-$un_mc** ' ,' ** عشان تفتح الشات** ')
+.addField('     **(8)-$bot** ' ,' ** عشان تعرف احوال البوت  ** ')
+.addField('     **(9)-$send** ' ,' ** عشان ترسل رسالة لشخص علي خاص من البوت  ** ')
 .setColor('#ff0004')
   message.channel.sendEmbed(embed);
     }
@@ -303,7 +259,7 @@ message.channel.send({embed:embed});
  
  
  client.on('message', message => {
-	  var prefix = "b!"
+	  var prefix = "$"
     if (message.author.id === client.user.id) return;
             if (message.content.startsWith(prefix + "ping")) {
         message.channel.sendMessage(':shield: Pong! :shield:  In `' + `${client.ping}` + ' ms`');
@@ -428,13 +384,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
  
  
   
- client.on('message', message=> {
-    if (message.author.bot) return;
-    if (message.isMentioned(client.user))
-    {
-    message.reply(" ||صنع بواسطة Yousef Gaming ");
-    }
-});
+
  
  
  
