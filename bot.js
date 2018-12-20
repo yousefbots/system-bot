@@ -492,54 +492,7 @@ client.on("message", message => {
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  client.on('message', msg => {
  if (msg.content.startsWith('$send')) {
       let args = msg.content.split(' ').slice(1)
